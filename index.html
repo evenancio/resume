@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Currículo oficial e amostras dos trabalhos de Evandro Venancio, arquiteto de software, especialista de front-end, entusiasta de tecnologia e metodologias ágeis.">
+        <meta name="author" content="Evandro Venancio">
+
+        <title>Evandro Venancio</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
+	    <link href="css/main.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    </head>
+    <body scroll-spy style="background-color: #000000;">
+        <div ng-controller="IndexController">
+            <div ng-repeat="l in partials" ng-include="l.url"></div>
+        </div>
+        <script src="js/libs/LAB.min.js"></script>
+        <script>
+            $LAB
+                .script('https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+                .script('js/libs/bootstrap.min.js')
+                .script('js/libs/angular.min.js').wait()
+                .script('js/libs/ui-bootstrap-tpls-0.5.0.min.js')
+                .script('js/controllers/FeedController.js')
+                .script('js/controllers/CarouselController.js')
+                .script('js/directives/ScrollOnClickDirective.js').wait()
+                .script('js/directives/ScrollOnMenuClickDirective.js').wait()
+                .script('js/directives/ScrollSpy.js').wait()
+                .script('js/app.js')
+                .wait(function(){
+                    angular.bootstrap(document, ['app']);
+                });
+        </script>
+    </body>
+
+</html>

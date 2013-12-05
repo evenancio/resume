@@ -1,0 +1,134 @@
+/* styles for layout */
+html,body
+{
+    height:100%;
+    font-family: 'Inconsolata', sans-serif;
+}
+
+h1{
+    font-family: 'Inconsolata';
+}
+
+#wrap
+{
+    min-height: 100%;
+}
+
+#main
+{
+    overflow:auto;
+    padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer
+{
+    position: relative;
+    clear:both;
+    color:#000;
+}
+
+.custom-accordion a{
+    text-decoration: none;
+}
+
+.custom-accordion a:hover{
+    color: #808080;
+}
+
+.navbar-center,
+.navbar-center > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+.navbar-center {
+    text-align:center;
+}
+
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+    color: #0F0;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    text-decoration: underline;
+    color: #0F0;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #D5D5D5;
+}
+
+.section .heading {
+    color: #0F0;
+    font-size: 3em;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.timeline {
+    margin: 0px auto;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.timeline .year {
+    background: mediumpurple;
+    font-size: 1.5em;
+    line-height: 4;
+    color: #000;
+    width: 6em;
+    border-radius: 50%;
+    max-width: 4em;
+    clear: both;
+    margin: 0.2em auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.timeline .event {
+    margin: 50px 2.5% 50px 2.5%;
+    background: #000000;
+    text-align: left;
+    padding: 2em;
+    color: #ffffff;
+    position: relative;
+    border-radius: 5px;
+    list-style-type: none;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: background .15s linear;
+    -moz-transition: background .15s linear;
+    -ms-transition: background .15s linear;
+    -o-transition: background .15s linear;
+    transition: background .15s linear;
+}
+
+.timeline .heading {
+    color: orange;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.timeline .month {
+    display: block;
+    margin-bottom: 15px;
+    color: mediumpurple;
+    font-size: 0.9em;
+}

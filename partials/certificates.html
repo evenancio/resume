@@ -1,0 +1,14 @@
+<div id="certificates" class="page-header" ng-controller="CarouselCtrl" style="border-bottom: none; margin-top: 200px;">
+    <carousel interval="myInterval" style="background-color: white; padding-top: 80px; padding-bottom: 50px;">
+        <slide ng-repeat="slide in slides" active="slide.active">
+            <div class="item active" style="text-align: center;">
+                <img src="{{slide.image}}">
+                <div class="container">
+                    <div class="carousel-caption" style="padding-bottom: 0px;">
+                        <h1 style="color: #ffffff; background-color: #000000;">{{slide.title}}</h1>
+                    </div>
+                </div>
+            </div>
+        </slide>
+    </carousel>
+</div>

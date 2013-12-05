@@ -1,0 +1,63 @@
+<div id="feed" style="margin-top: 100px;">
+    <div class="container" id="wordpress">
+        <span style="color: orange;font-size: 3em;">#minhas_publicações</span><br>
+        <span style="color: white;font-size: 2em;">@blog_pessoal_(last 7 updates)</span>
+        <div class="row">
+            <div class="col-lg-6 col-md-6" style="text-align: center;">
+                <a href="http://evenancio.wordpress.com"><img class="img-responsive" src="media/img/wordpress-logo2.png"></a>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div ng-controller="FeedCtrl" ng-init="init('http://evenancio.wordpress.com/rss')">
+                    <div class="row-fluid">
+                        <ul class="list-unstyled">
+                            <li ng-repeat="feed in feeds | limitTo: 7">
+                                <p><span style="color: orange;">{{feed.publishedDate}}</span><br>
+                                    <span style="font-size: 1.1em;"><a href="{{feed.link}}" style="color: #00FF00;">{{feed.title}}</a></span> </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="technet" style="margin-top: 100px; margin-bottom: 100px;">
+        <span style="color: white;font-size: 2em;">@microsoft_technet_(last 3 updates)</span>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div ng-controller="FeedCtrl" ng-init="init('http://social.technet.microsoft.com/Profile/u/activities/feed?displayName=Evandro%20Venancio')">
+                    <div class="row-fluid">
+                        <ul class="list-unstyled">
+                            <li ng-repeat="feed in feeds | limitTo: 3">
+                                <p><span style="color: orange;">{{feed.publishedDate}}</span><br>
+                                    <span style="font-size: 1.1em;"><a href="{{feed.link}}" style="color: #00FF00;">{{feed.title}}</a></span> </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <a href="http://evenancio.wordpress.com"><img class="img-responsive" src="media/img/technet.png" width="500" height="180"></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="technet" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <span style="color: white;font-size: 2em;">@palestra_design_patterns</span>
+            <p><span style="color: orange;">universidade metodista de são paulo - 2011</span><br>
+            <span style="font-size: 1.1em;color: #00FF00">Palestra de Design Patterns sob o ponto de vista arquitetônico, apresentando diferentes tipos de paradigmas e princípios, como o GoF, ISO, GRASP, SOLID, MVC e Aspect.</span></p>
+            <iframe style="margin: 0 auto;" src="https://www.slideshare.net/slideshow/embed_code/28361700" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <span style="color: white;font-size: 2em;">@palestra_rest_hateoas</span>
+            <p><span style="color: orange;">nerdtalk - 2013</span><br>
+            <span style="font-size: 1.1em;color: #00FF00">Apresentação de 15 minutos que demonstra que, para estar 100% compliance com a arquitetura REST, devemos utilizar hipermídias através da constraint HATEOAS para controlar o estado.</span></p>
+            <iframe src="https://www.slideshare.net/slideshow/embed_code/28524570" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        </div>
+    </div>
+    </div>
+    
+</div>
